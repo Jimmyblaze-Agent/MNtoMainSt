@@ -8,14 +8,14 @@ export default function Footer() {
             <p>
               Expert Disney vacation planning from Rochester, MN.
               Authorized Disney Vacation Planner helping SE Minnesota
-              families create magical, stress-free Disney trips —
+              families create magical, stress-free Disney trips â
               at absolutely no cost to you.
             </p>
             <div className="footer-socials">
               <a href="https://instagram.com/mistymousemagic" target="_blank" rel="noopener noreferrer" className="social-btn" title="Follow @mistymousemagic on Instagram">
                 <i className="fab fa-instagram" aria-hidden="true" />
               </a>
-              <a href="https://www.facebook.com/MagicWithoutLimits" target="_blank" rel="noopener noreferrer" className="social-btn" title="Magic Without Limits on Facebook">
+              <a href="https://www.facebook.com/groups/magicwithoutlimits/" target="_blank" rel="noopener noreferrer" className="social-btn" title="Magic Without Limits on Facebook">
                 <i className="fab fa-facebook-f" aria-hidden="true" />
               </a>
               <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" className="social-btn" title="Pinterest">
@@ -40,7 +40,7 @@ export default function Footer() {
               <a href="https://instagram.com/mistymousemagic" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fab fa-instagram" /> @mistymousemagic
               </a>
-              <a href="https://www.facebook.com/MagicWithoutLimits" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <a href="https://www.facebook.com/groups/magicwithoutlimits/" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <i className="fab fa-facebook-f" /> Magic Without Limits
               </a>
               <a href="mailto:hello@mntomainstreet.com" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -54,8 +54,8 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div>© 2026 Minnesota to Main Street · Rochester, MN · All rights reserved.</div>
-          <div className="footer-badge">🏰 Authorized Disney Vacation Planner</div>
+          <div>Â© 2026 Minnesota to Main Street Â· Rochester, MN Â· All rights reserved.</div>
+          <div className="footer-badge">ð° Authorized Disney Vacation Planner</div>
           <div>
             <a href="#" style={{ color: 'inherit', marginRight: '16px' }}>Privacy Policy</a>
             <a href="#" style={{ color: 'inherit' }}>Unsubscribe</a>
