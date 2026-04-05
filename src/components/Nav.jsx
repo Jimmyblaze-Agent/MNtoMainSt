@@ -32,7 +32,7 @@ export default function Nav() {
             </div>
             <div className="nav-cta">
               <a href="#signup" className="btn btn-outline">Join Newsletter</a>
-              <a href="#consultation" className="btn btn-primary">Book Free Consult ✨</a>
+              <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Free Consult ✨</a>
             </div>
             <button
               className={`hamburger${menuOpen ? ' open' : ''}`}
@@ -52,7 +52,7 @@ export default function Nav() {
         <a href="#instagram" onClick={closeMobile}>Instagram</a>
         <a href="#testimonials" onClick={closeMobile}>Reviews</a>
         <a href="#signup" className="btn btn-primary btn-lg" onClick={closeMobile}>Join Newsletter ✨</a>
-        <a href="#consultation" className="btn btn-outline btn-lg" onClick={closeMobile}>Book Free Consult</a>
+        <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg" onClick={closeMobile}>Book Free Consult</a>
       </div>
     </>
   )

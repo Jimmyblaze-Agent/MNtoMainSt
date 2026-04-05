@@ -14,7 +14,7 @@ export default function ConsultationCTA() {
             you a custom plan at absolutely no cost.
           </p>
           <div className="cta-buttons">
-            <a href="mailto:hello@mntomainstreet.com" className="btn-gold">
+            <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn-gold">
               📅 Book My Free Consultation
             </a>
             <a href="#signup" className="btn btn-outline btn-lg">
