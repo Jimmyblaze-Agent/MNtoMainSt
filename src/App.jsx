@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import TrustBar from './components/TrustBar'
-import Instagram from './components/Instagram'
 import About from './components/About'
 import Newsletter from './components/Newsletter'
 import SignupForm from './components/SignupForm'
@@ -40,7 +39,6 @@ export default function App() {
       <main>
         <Hero />
         <TrustBar />
-        <Instagram />
         <About />
         <Newsletter />
         <SignupForm />
