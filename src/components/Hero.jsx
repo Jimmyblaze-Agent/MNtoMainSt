@@ -96,7 +96,7 @@ export default function Hero() {
             <a href="#signup" className="btn btn-primary btn-lg">
               <span>&#x2728;</span> Join the Free Newsletter
             </a>
-            <a href="#consultation" className="btn btn-outline btn-lg">
+            <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
               Book a Free Consultation &#x2192;
             </a>
           </div>
@@ -122,10 +122,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll-hint">
-        <span>Scroll to explore</span>
-        <div className="scroll-chevron" />
-      </div>
     </section>
   )
 }
