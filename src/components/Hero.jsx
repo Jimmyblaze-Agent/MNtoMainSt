@@ -49,7 +49,7 @@ export default function Hero() {
               '--delay': s.delay,
             }}
           >
-            ✦
+            &#x2726;
           </div>
         ))}
       </div>
@@ -85,7 +85,7 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-badge">
             <div className="dot" />
-            Authorized Disney Vacation Planner · Rochester, MN
+            Authorized Disney Vacation Planner &#183; Rochester, MN
           </div>
           <h1>Plan Your <em>Perfect</em> Disney Vacation<br />Without the Stress</h1>
           <p className="hero-sub">
@@ -94,10 +94,10 @@ export default function Hero() {
           </p>
           <div className="hero-ctas">
             <a href="#signup" className="btn btn-primary btn-lg">
-              <span>✨</span> Join the Free Newsletter
+              <span>&#x2728;</span> Join the Free Newsletter
             </a>
-            <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
-              Book a Free Consultation →
+            <a href="#consultation" className="btn btn-outline btn-lg">
+              Book a Free Consultation &#x2192;
             </a>
           </div>
         </div>
@@ -117,9 +117,14 @@ export default function Hero() {
           <div className="hero-stat-label">Consultation</div>
         </div>
         <div className="hero-stat">
-          <div className="hero-stat-num">✦</div>
+          <div className="hero-stat-num">&#x2726;</div>
           <div className="hero-stat-label">Authorized Planner</div>
         </div>
+      </div>
+
+      <div className="hero-scroll-hint">
+        <span>Scroll to explore</span>
+        <div className="scroll-chevron" />
       </div>
     </section>
   )
