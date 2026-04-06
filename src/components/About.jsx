@@ -17,7 +17,7 @@ export default function About() {
             </div>
 
             <p>
-              As a Rochester, MN local and lifelong Disney enthusiast, I've spent over a decade
+              As a Rochester, MN local and lifelong Disney enthusiast, I've spent over two decades
               studying every corner of Disney World, Disneyland, and Disney Cruise Line. I know
               which Lightning Lanes are worth fighting for, which dining reservations book out 60 days
               in advance, and how to make every dollar stretch further.
