@@ -30,7 +30,7 @@ export default function Footer() {
               <a href="#about">About Misty</a>
               <a href="#newsletter">Newsletter</a>
               <a href="#testimonials">Reviews</a>
-              <a href="#consultation">Book a Consult</a>
+              <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer">Book a Consult</a>
             </div>
           </div>
 
