@@ -18,7 +18,7 @@ export default function Nav() {
         <div className="container">
           <div className="nav-inner">
             <a href="#" className="nav-logo">
-              <img src="/castle.svg" className="nav-logo-mark" alt="MN to Main Street logo" />
+              <img src="/misty-chef-mickey.png" className="nav-logo-mark" alt="MN to Main Street logo" />
               <div className="nav-logo-text">
                 Minnesota to Main Street
                 <span>Authorized Disney Vacation Planner</span>
@@ -27,11 +27,12 @@ export default function Nav() {
             <div className="nav-links">
               <a href="#about">About Misty</a>
               <a href="#newsletter">Newsletter</a>
+              <a href="#instagram">Instagram</a>
               <a href="#testimonials">Reviews</a>
             </div>
             <div className="nav-cta">
               <a href="#signup" className="btn btn-outline">Join Newsletter</a>
-              <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book Free Consult â¨</a>
+              <a href="#consultation" className="btn btn-primary">Book Free Consult ✨</a>
             </div>
             <button
               className={`hamburger${menuOpen ? ' open' : ''}`}
@@ -48,9 +49,10 @@ export default function Nav() {
       <div className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu">
         <a href="#about" onClick={closeMobile}>About Misty</a>
         <a href="#newsletter" onClick={closeMobile}>Newsletter</a>
+        <a href="#instagram" onClick={closeMobile}>Instagram</a>
         <a href="#testimonials" onClick={closeMobile}>Reviews</a>
-        <a href="#signup" className="btn btn-primary btn-lg" onClick={closeMobile}>Join Newsletter â¨</a>
-        <a href="https://traveljoy.com/webforms/aCkdfH8UHZYBzY9sM978xh4n/forms/96wmRtUjBSVWtGwEMAt9v7wi/link" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg" onClick={closeMobile}>Book Free Consult</a>
+        <a href="#signup" className="btn btn-primary btn-lg" onClick={closeMobile}>Join Newsletter ✨</a>
+        <a href="#consultation" className="btn btn-outline btn-lg" onClick={closeMobile}>Book Free Consult</a>
       </div>
     </>
   )
