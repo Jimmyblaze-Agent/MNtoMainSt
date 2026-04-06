@@ -455,6 +455,8 @@ p  { line-height: 1.7; color: var(--gray-600); font-size: 1.05rem; }
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
+  .hero-content { padding-bottom: 180px; }
+  .hero-ctas { flex-direction: column; align-items: center; }
   .hero-stat { padding: 14px 20px; min-width: 120px; }
   .hero-stat-num { font-size: 1.3rem; }
   .signup-box { padding: 36px 24px; }
