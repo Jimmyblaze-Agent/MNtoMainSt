@@ -5,10 +5,10 @@ export default function About() {
         <div className="about-grid">
           <div className="about-content fade-in fade-in-delay-1">
             <div className="section-label">Meet Your Planner</div>
-            <h2>Hi, I'm Misty — Your Minnesota Disney Expert</h2>
+            <h2>Hi, I'm Misty â Your Minnesota Disney Expert</h2>
 
             <div className="authorized-badge">
-              <span className="authorized-badge-icon">🏰</span>
+              <span className="authorized-badge-icon">ð°</span>
               <div className="authorized-badge-text">
                 <div className="line1">Officially Certified</div>
                 <div className="line2">Authorized Disney Vacation Planner</div>
@@ -19,31 +19,31 @@ export default function About() {
             <p>
               As a Rochester, MN local and lifelong Disney enthusiast, I've spent over a decade
               studying every corner of Disney World, Disneyland, and Disney Cruise Line. I know
-              which FastPasses are worth fighting for, which dining reservations book out 60 days
+              which Lightning Lanes are worth fighting for, which dining reservations book out 60 days
               in advance, and how to make every dollar stretch further.
             </p>
             <p>
-              My planning services are <strong>completely free to you</strong> — I'm compensated
+              My planning services are <strong>completely free to you</strong> â I'm compensated
               by Disney as an Authorized Vacation Planner. You get an expert in your corner at zero cost.
             </p>
 
             <div className="credentials">
               <div className="credential-item">
-                <span className="credential-icon">🏰</span>
+                <span className="credential-icon">ð°</span>
                 <div className="credential-text">
                   Authorized Disney Vacation Planner
                   <span>Official credential from Walt Disney Travel Company</span>
                 </div>
               </div>
               <div className="credential-item">
-                <span className="credential-icon">📍</span>
+                <span className="credential-icon">ð</span>
                 <div className="credential-text">
                   Serving Rochester, MN &amp; Southeast Minnesota
-                  <span>Local expert, personal service — not a call center</span>
+                  <span>Local expert, personal service â not a call center</span>
                 </div>
               </div>
               <div className="credential-item">
-                <span className="credential-icon">💌</span>
+                <span className="credential-icon">ð</span>
                 <div className="credential-text">
                   Monthly Disney Insider Newsletter
                   <span>Tips, park news, and money-saving strategies</span>
