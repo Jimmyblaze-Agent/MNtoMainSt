@@ -7,6 +7,7 @@ export default function SignupForm() {
   const [emailError, setEmailError] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [errorMsg, setErrorMsg] = useState('')
 
   const validate = () => {
     let valid = true
@@ -19,14 +20,28 @@ export default function SignupForm() {
     e.preventDefault()
     if (!validate()) return
     setLoading(true)
-    // TODO: Replace with Beehiiv embed form action URL
-    // For now we simulate a successful submission
-    await new Promise(r => setTimeout(r, 800))
-    setLoading(false)
-    setSubmitted(true)
-    // Fire Facebook Pixel Lead event on successful signup
-    if (typeof window.fbq === 'function') {
-      fbq('track', 'Lead', { content_name: 'Newsletter Signup' })
+    setErrorMsg('')
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, firstName }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setErrorMsg(data.error || 'Something went wrong. Please try again.')
+        setLoading(false)
+        return
+      }
+      setLoading(false)
+      setSubmitted(true)
+      // Fire Facebook Pixel Lead event on successful signup
+      if (typeof window.fbq === 'function') {
+        fbq('track', 'Lead', { content_name: 'Newsletter Signup' })
+      }
+    } catch (err) {
+      setErrorMsg('Network error. Please check your connection and try again.')
+      setLoading(false)
     }
   }
 
@@ -72,6 +87,7 @@ export default function SignupForm() {
                   />
                   {emailError && <div className="error-msg show">Please enter a valid email address.</div>}
                 </div>
+                {errorMsg && <div className="error-msg show" style={{ marginBottom: '12px', textAlign: 'center' }}>{errorMsg}</div>}
                 <button type="submit" className="submit-btn" disabled={loading}>
                   {loading ? 'Sending...' : <>Yes! Send Me Disney Tips <span className="btn-icon">&#x2192;</span></>}
                 </button>
