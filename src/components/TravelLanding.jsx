@@ -224,7 +224,7 @@ export default function TravelLanding() {
         <div className="container">
           <div className="tl-about-grid">
             <div className="tl-about-photo-side fade-in">
-              <img src="/misty-chef-mickey.png" alt="Misty — MN to Main Street Disney Vacation Planner" />
+              <img src="/MistyMickyFilm.png" alt="Misty — MN to Main Street Disney Vacation Planner" />
             </div>
             <div className="tl-about-content fade-in fade-in-delay-1">
               <div className="section-label">Meet Your Planner</div>
