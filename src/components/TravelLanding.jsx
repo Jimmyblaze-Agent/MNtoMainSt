@@ -1,40 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import './TravelLanding.css'
 
-const PDF_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=1Ef3QqO31L3QRH3trampXvJ3wklIhXHFN'
-
-const insideCards = [
-  {
-    icon: <i className="fa-solid fa-plane" style={{ color: 'var(--gold)' }} />,
-    title: 'RST vs. MSP Breakdown',
-    desc: 'Side-by-side comparison so you pick the right airport for your family — cost, time, and stress all factored in.',
-  },
-  {
-    icon: <i className="fa-solid fa-car" style={{ color: 'var(--gold)' }} />,
-    title: 'MSP Parking Hack',
-    desc: 'The strategy that saves Rochester families $150+ per trip — where to park, what to book, and when.',
-  },
-  {
-    icon: <i className="fa-solid fa-chart-line" style={{ color: 'var(--gold)' }} />,
-    title: '2026 Flight Trends',
-    desc: 'When to book, which airlines serve MSP-to-MCO best, and seasonal fare patterns for the year ahead.',
-  },
-  {
-    icon: <i className="fa-solid fa-bus" style={{ color: 'var(--gold)' }} />,
-    title: 'Orlando Ground Transport',
-    desc: 'Rental car vs. rideshare vs. Sunshine Flyer vs. Mears — compared, priced, and ranked for families.',
-  },
-  {
-    icon: <i className="fa-solid fa-clock" style={{ color: 'var(--gold)' }} />,
-    title: 'Travel Day Timeline',
-    desc: 'A minute-by-minute schedule from your Rochester driveway to your Disney resort room.',
-  },
-  {
-    icon: <i className="fa-solid fa-suitcase" style={{ color: 'var(--gold)' }} />,
-    title: 'Packing Checklist',
-    desc: 'The essentials, the easy-to-forget items, and the things you definitely don\'t need to bring.',
-  },
-]
+const PDF_DOWNLOAD_URL = 'https://drive.google.com/uc?export=download&id=17kBVm7KUae-jdXUzkXFdewrvoE0AcATC'
 
 export default function TravelLanding() {
   const [firstName, setFirstName] = useState('')
@@ -182,141 +149,72 @@ export default function TravelLanding() {
               <li><i className="fa-solid fa-check-circle" /> Orlando ground transport &mdash; sorted, compared, done</li>
               <li><i className="fa-solid fa-check-circle" /> A minute-by-minute Rochester-to-resort travel timeline</li>
             </ul>
-            <div className="tl-hero-cta-area">
-              <a href="#get-the-guide" className="btn-gold">
-                <i className="fa-solid fa-envelope" /> Get the Free Guide
-              </a>
-              <p className="tl-hero-small-text">
-                <i className="fa-solid fa-lock" /> Free. No spam. Unsubscribe anytime.
-              </p>
-            </div>
           </div>
 
-          {/* PDF Preview Card */}
-          <div className="tl-pdf-preview-card">
-            <div className="tl-pdf-mock">
-              <div className="tl-pdf-mock-cover">
-                <img src="/misty-chef-mickey.png" alt="Guide cover" />
-                <div className="pdf-title">Rochester to<br />Mouse House</div>
-                <div className="pdf-subtitle">2026 Family Guide</div>
-              </div>
-              <div className="tl-pdf-mock-body">
-                <div className="tl-pdf-mock-line" />
-                <div className="tl-pdf-mock-line" />
-                <div className="tl-pdf-mock-line" />
-                <div className="tl-pdf-mock-line" />
-                <div className="tl-pdf-mock-line" />
-              </div>
+          {/* EMAIL SIGNUP — inline in hero */}
+          <div className="tl-hero-signup" id="get-the-guide">
+            <div className="tl-signup-box">
+              {!submitted ? (
+                <div>
+                  <div className="section-label" style={{ justifyContent: 'center', marginBottom: '8px' }}>Free Instant Download</div>
+                  <h2>Get the Free Guide</h2>
+                  <p className="sub-text">
+                    Drop your name and email below and we'll send you the guide instantly.
+                    Plus you'll get weekly Disney tips, deal alerts, and SE Minnesota travel hacks.
+                  </p>
+
+                  <form onSubmit={handleSubmit} noValidate>
+                    <div className="tl-form-group">
+                      <label htmlFor="tl-firstName">First Name</label>
+                      <input
+                        type="text"
+                        id="tl-firstName"
+                        placeholder="Your first name"
+                        autoComplete="given-name"
+                        className={firstNameError ? 'error' : ''}
+                        value={firstName}
+                        onChange={e => setFirstName(e.target.value)}
+                      />
+                      {firstNameError && <div className="tl-error-msg show">Please enter your first name.</div>}
+                    </div>
+                    <div className="tl-form-group">
+                      <label htmlFor="tl-email">Email Address</label>
+                      <input
+                        type="email"
+                        id="tl-email"
+                        placeholder="you@example.com"
+                        autoComplete="email"
+                        className={emailError ? 'error' : ''}
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                      />
+                      {emailError && <div className="tl-error-msg show">Please enter a valid email address.</div>}
+                    </div>
+                    {errorMsg && <div className="tl-error-msg show" style={{ marginBottom: '12px', textAlign: 'center', display: 'block' }}>{errorMsg}</div>}
+                    <button type="submit" className="tl-submit-btn" disabled={loading}>
+                      {loading ? 'Sending...' : <>Send Me the Guide <span className="btn-icon"><i className="fa-solid fa-paper-plane" /></span></>}
+                    </button>
+                  </form>
+
+                  <p className="tl-form-disclaimer">
+                    <i className="fa-solid fa-lock" style={{ marginRight: '4px' }} />
+                    No spam, ever. Just Disney magic. Unsubscribe anytime.
+                  </p>
+                </div>
+              ) : (
+                <div className="tl-signup-success show">
+                  <div className="tl-success-check"><i className="fa-solid fa-check" /></div>
+                  <h3>You're In! Here's Your Guide.</h3>
+                  <p>Check your inbox for a welcome email from MN to Main Street. In the meantime, grab your guide right now:</p>
+                  <a href={PDF_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="tl-download-btn">
+                    <i className="fa-solid fa-file-pdf" /> Download the PDF
+                  </a>
+                  <p style={{ fontSize: '.82rem', color: 'var(--gray-600)', marginTop: '12px' }}>
+                    15 pages &middot; Printable &middot; 2026 prices &amp; routes
+                  </p>
+                </div>
+              )}
             </div>
-            <div className="tl-pdf-preview-stats">
-              <div className="tl-pdf-stat">
-                <div className="tl-pdf-stat-num">15</div>
-                <div className="tl-pdf-stat-label">Pages</div>
-              </div>
-              <div className="tl-pdf-stat">
-                <div className="tl-pdf-stat-num">6</div>
-                <div className="tl-pdf-stat-label">Sections</div>
-              </div>
-              <div className="tl-pdf-stat">
-                <div className="tl-pdf-stat-num">$150+</div>
-                <div className="tl-pdf-stat-label">Potential Savings</div>
-              </div>
-              <div className="tl-pdf-stat">
-                <div className="tl-pdf-stat-num">100%</div>
-                <div className="tl-pdf-stat-label">Free</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHAT'S INSIDE */}
-      <section className="tl-whats-inside">
-        <div className="container text-center">
-          <div className="section-label" style={{ justifyContent: 'center' }}>What&rsquo;s Inside</div>
-          <h2>Everything You Need to Get There</h2>
-          <p className="sub">
-            Six chapters of Rochester-specific Disney travel intel you won't find on any generic blog.
-          </p>
-          <div className="tl-inside-grid">
-            {insideCards.map((card, i) => (
-              <div className={`tl-inside-card fade-in fade-in-delay-${(i % 3) + 1}`} key={i}>
-                <div className="tl-inside-icon">{card.icon}</div>
-                <h3>{card.title}</h3>
-                <p>{card.desc}</p>
-              </div>
-            ))}
-          </div>
-          <a href="#get-the-guide" className="btn btn-primary" style={{ padding: '16px 36px' }}>
-            <i className="fa-solid fa-download" /> Download the Free Guide
-          </a>
-        </div>
-      </section>
-
-      {/* EMAIL SIGNUP */}
-      <section className="tl-signup-section" id="get-the-guide">
-        <div className="container">
-          <div className="tl-signup-box">
-            {!submitted ? (
-              <div>
-                <div className="section-label" style={{ justifyContent: 'center', marginBottom: '8px' }}>Free Instant Download</div>
-                <h2>Get the Rochester to Mouse House Guide</h2>
-                <p className="sub-text">
-                  Drop your name and email below and we'll send you the guide instantly.
-                  Plus you'll get weekly Disney tips, deal alerts, and SE Minnesota travel hacks.
-                </p>
-
-                <form onSubmit={handleSubmit} noValidate>
-                  <div className="tl-form-group">
-                    <label htmlFor="tl-firstName">First Name</label>
-                    <input
-                      type="text"
-                      id="tl-firstName"
-                      placeholder="Your first name"
-                      autoComplete="given-name"
-                      className={firstNameError ? 'error' : ''}
-                      value={firstName}
-                      onChange={e => setFirstName(e.target.value)}
-                    />
-                    {firstNameError && <div className="tl-error-msg show">Please enter your first name.</div>}
-                  </div>
-                  <div className="tl-form-group">
-                    <label htmlFor="tl-email">Email Address</label>
-                    <input
-                      type="email"
-                      id="tl-email"
-                      placeholder="you@example.com"
-                      autoComplete="email"
-                      className={emailError ? 'error' : ''}
-                      value={email}
-                      onChange={e => setEmail(e.target.value)}
-                    />
-                    {emailError && <div className="tl-error-msg show">Please enter a valid email address.</div>}
-                  </div>
-                  {errorMsg && <div className="tl-error-msg show" style={{ marginBottom: '12px', textAlign: 'center', display: 'block' }}>{errorMsg}</div>}
-                  <button type="submit" className="tl-submit-btn" disabled={loading}>
-                    {loading ? 'Sending...' : <>Send Me the Guide <span className="btn-icon"><i className="fa-solid fa-paper-plane" /></span></>}
-                  </button>
-                </form>
-
-                <p className="tl-form-disclaimer">
-                  <i className="fa-solid fa-lock" style={{ marginRight: '4px' }} />
-                  No spam, ever. Just Disney magic. Unsubscribe anytime.
-                </p>
-              </div>
-            ) : (
-              <div className="tl-signup-success show">
-                <div className="tl-success-check"><i className="fa-solid fa-check" /></div>
-                <h3>You're In! Here's Your Guide.</h3>
-                <p>Check your inbox for a welcome email from MN to Main Street. In the meantime, grab your guide right now:</p>
-                <a href={PDF_DOWNLOAD_URL} target="_blank" rel="noopener noreferrer" className="tl-download-btn">
-                  <i className="fa-solid fa-file-pdf" /> Download the PDF
-                </a>
-                <p style={{ fontSize: '.82rem', color: 'var(--gray-600)', marginTop: '12px' }}>
-                  15 pages &middot; Printable &middot; 2026 prices &amp; routes
-                </p>
-              </div>
-            )}
           </div>
         </div>
       </section>

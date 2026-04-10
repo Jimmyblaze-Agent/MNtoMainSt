@@ -203,12 +203,14 @@
 .travel-page .tl-inside-card h3 { color: var(--navy); font-size: 1.05rem; margin-bottom: 10px; }
 .travel-page .tl-inside-card p { color: var(--gray-600); font-size: .9rem; }
 
-/* ===== SIGNUP SECTION ===== */
-.travel-page .tl-signup-section { padding: 90px 0; background: var(--white); }
+/* ===== HERO INLINE SIGNUP ===== */
+.travel-page .tl-hero-signup {
+  animation: fadeUp .9s .5s ease forwards; opacity: 0;
+}
 .travel-page .tl-signup-box {
-  max-width: 600px; margin: 0 auto; background: var(--white);
+  background: var(--white);
   border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
-  padding: 56px 48px; border: 1px solid var(--gray-100);
+  padding: 40px 36px; border: 1px solid var(--gray-100);
   text-align: center; position: relative; overflow: hidden;
 }
 .travel-page .tl-signup-box::before {
@@ -374,19 +376,14 @@
   .travel-page .tl-hero-text { text-align: center; }
   .travel-page .tl-hero-sub { margin-left: auto; margin-right: auto; }
   .travel-page .tl-hero-checklist { display: inline-block; text-align: left; }
-  .travel-page .tl-hero-cta-area { text-align: center; }
-  .travel-page .tl-hero-small-text { text-align: center; }
-  .travel-page .tl-pdf-preview-card { max-width: 380px; margin: 0 auto; }
+  .travel-page .tl-hero-signup { max-width: 440px; margin: 0 auto; }
   .travel-page .tl-about-grid { grid-template-columns: 1fr; gap: 40px; }
   .travel-page .tl-about-photo-side { order: -1; }
   .travel-page .tl-about-photo-side img { max-width: 300px; }
-  .travel-page .tl-inside-grid { grid-template-columns: 1fr 1fr; }
   .travel-page .tl-nav-cta .btn-text { display: none; }
 }
 
 @media(max-width: 640px) {
   .travel-page .tl-hero-content { padding-top: 110px; padding-bottom: 50px; }
-  .travel-page .tl-signup-box { padding: 36px 24px; }
-  .travel-page .tl-inside-grid { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
-  .travel-page .tl-pdf-preview-stats { grid-template-columns: 1fr 1fr; }
+  .travel-page .tl-signup-box { padding: 28px 20px; }
 }
